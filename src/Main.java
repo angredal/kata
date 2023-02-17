@@ -54,7 +54,7 @@ public class Main {
                     break;
 
                 default:
-                    throw new IllegalArgumentException("");
+                    throw new IllegalArgumentException("Невозможно конвертировать");
             }
         }
         return sum;
@@ -68,7 +68,7 @@ public class Main {
         String[] inputs=input.split(" ");
         if (inputs.length!=3) throw new IllegalArgumentException("Неверный формат ввода");
         String sign = inputs[1];
-        if ((!sign.equals(multiply)&&!sign.equals(divide)&&!sign.equals(minus)&&!sign.equals(plus))) throw new RuntimeException("Wrong");
+        if ((!sign.equals(multiply)&&!sign.equals(divide)&&!sign.equals(minus)&&!sign.equals(plus))) throw new IllegalArgumentException("Неверная операция");
         int c=0;
         if (inputs[0].matches("[0-9]+")&&inputs[2].matches("[IXCVL]+")) throw new IllegalArgumentException("Неверный формат ввода");
         if (inputs[0].matches("[IXCVL]+")&&inputs[2].matches("[0-9]+")) throw new IllegalArgumentException("Неверный формат ввода");
